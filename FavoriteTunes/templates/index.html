@@ -31,11 +31,7 @@
 
 <body>
     <center><h1>Song List</h1><center>
-    {% comment %} <ul>
-        {% for song in songs %}
-            <li><a href="{% url 'song_detail' song.id %}">{{ song.title }} - {{ song.artist.name }}</a></li>
-        {% endfor %}
-    </ul> {% endcomment %}
+    <!-- Song Table -->
     <table class="table">
         <thead>
           <tr>
@@ -53,9 +49,9 @@
           </tr>
           {% endfor %}
         </tbody>
-      </table>
+    </table>
     <!-- Artist table -->
-      <table class="table mt-5">
+    <table class="table mt-5">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -72,11 +68,12 @@
                     </tr>
             {% endfor %}
         </tbody>
-      </table>
-
-      <button type="button" class="btn song-btn btn-dark" data-toggle="modal" data-target="#addSongModal">Add Song</button>
-      <button type="button" class="btn artist-btn btn-danger" data-toggle="modal" data-target="#addArtist">Add Artist</button>
-      <div class="modal" id="addSongModal" tabindex="-1" role="dialog" aria-labelledby="addSongModalLabel" aria-hidden="true">
+    </table>
+    <!-- buttons -->
+    <button type="button" class="btn song-btn btn-dark" data-toggle="modal" data-target="#addSongModal">Add Song</button>
+    <button type="button" class="btn artist-btn btn-danger" data-toggle="modal" data-target="#addArtist">Add Artist</button>
+    <!-- Add Song Modal -->
+    <div class="modal" id="addSongModal" tabindex="-1" role="dialog" aria-labelledby="addSongModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -106,8 +103,8 @@
             </div>
         </div>
     </div>
-    
-      <div class="modal" id="addArtist" tabindex="-1" role="dialog" aria-labelledby="addArtistModalLabel" aria-hidden="true">
+    <!-- Add Artist Modal -->
+    <div class="modal" id="addArtist" tabindex="-1" role="dialog" aria-labelledby="addArtistModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -130,11 +127,9 @@
             </div>
         </div>
     </div>
-
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-     
+</body>  
 </html>

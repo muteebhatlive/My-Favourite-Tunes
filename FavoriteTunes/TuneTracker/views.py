@@ -28,7 +28,7 @@ def add_song(request):
     else:
         form = SongForm()
 
-    return render(request, 'TuneTracker/song_list.html', {'form': form, 'artists': artists})
+    return render(request, 'song_list.html', {'form': form, 'artists': artists})
 
 def add_artist(request):
     if request.method == 'POST':
